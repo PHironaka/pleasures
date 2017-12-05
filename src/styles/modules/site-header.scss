@@ -1,0 +1,79 @@
+/*================ Site Header ================*/
+.site-logo {
+  display: block;
+img {
+    display: block;
+    width: 100%;
+    margin:0;
+  }
+}
+
+
+
+.site-nav--mobile .cart-link {
+    padding: 0 7px 7px;
+}
+
+
+.site-nav__link {
+	font-size: .85em;
+    text-transform: uppercase;
+    padding: 11px;
+    
+    .icon-arrow-down {
+    vertical-align:sub;
+    }
+	}
+
+.site-header {
+	padding:0;
+	background:black;
+    position: fixed;
+    clear: both;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+
+      @include media-query($small) {
+    background:#ffc0cb;
+
+  }
+
+a {
+    
+   
+    padding-bottom: 4px;
+
+
+}
+}
+
+#subNav {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    padding: 20px 0;
+    margin: 0;
+    display: none;
+    width: 100%;
+    background-color: black;
+    justify-content: space-between;
+    overflow-x: hidden;
+    z-index: 10;
+    text-align:center;
+}
+
+.dropdown {
+	margin:0;
+	a {
+	color:black;
+	}
+}
+
+.site-nav__item {
+	position: inherit !important;
+	li {
+	display:inline-block;
+	    margin: 0 2em;
+	}
+}

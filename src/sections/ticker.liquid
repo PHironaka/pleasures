@@ -1,0 +1,73 @@
+<div class="index-section">
+ <div class="home-video {% if section.settings.home_video_bg_text_color %}{{ section.settings.home_video_bg_text_color }}{% endif %}">
+
+    
+
+        <h2 class="marquee"  >
+         <span style="color:{% if section.settings.home-video-text-1 %} {{ section.settings.color-font-1 | escape }} {%endif%};"> {{ section.settings.home-video-text-1 | escape }}</span>
+         <span style="color:{% if section.settings.home-video-text-2 %} {{ section.settings.color-font-2 | escape }} {%endif%};">{{ section.settings.home-video-text-2 | escape }}</span>
+         <span style="color:{% if section.settings.home-video-text-3 %} {{ section.settings.color-font-3 | escape }} {%endif%};">{{ section.settings.home-video-text-3 | escape }}</span>
+        </h2>
+ </div>
+
+ <div class="shop-all">
+<a href="/collections/all" class="enter"> Shop</a>
+ </div>
+
+ </div>
+
+
+{% schema %}
+  {
+  	"name": "Ticker",
+  	"settings": [
+  		
+  		{
+  			"type": "text",
+  			"id": "home-video-text-1",
+  			"label": "Heading",
+  			"default": "Welcome!"
+  		},
+
+        {
+        "type": "text",
+        "id": "home-video-text-2",
+        "label": "Heading",
+        "default": "Welcome!"
+      },
+
+        {
+        "type": "text",
+        "id": "home-video-text-3",
+        "label": "Heading",
+        "default": "Welcome!"
+      },
+
+      {
+        "type": "color",
+        "id": "color-font-1",
+        "label": "font color-1",
+        "default": "#fff"
+      },
+      {
+        "type": "color",
+        "id": "color-font-2",
+        "label": "font color-2",
+        "default": "#fff"
+      },
+      {
+        "type": "color",
+        "id": "color-font-3",
+        "label": "font color-3",
+        "default": "#fff"
+      }
+  		
+  	],
+  	"presets": [
+    	{
+    		"name": "Ticker",
+    		"category": "Ticker"
+    	}
+    ]
+  }
+{% endschema %}
