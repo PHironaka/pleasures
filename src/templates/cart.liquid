@@ -6,25 +6,24 @@
     - Shopify Payments - http://docs.shopify.com/manual/more/shopify-payments/testing-shopify-payments
 
 {% endcomment %}
-<div class="grid">
   <div class="grid__item large--five-sixths push--large--one-twelfth">
     {% if cart.item_count > 0 %}
-      <header class="section-header text-center">
-        <h1 class="text-center">{{ 'cart.general.title' | t }}</h1>
+   
+
+      <form class="checkout" action="/cart" method="post" novalidate class="cart">
+   <header class="section-header text-center">
+        <h1 class="text-center cart">{{ 'cart.general.title' | t }}</h1>
         <hr class="hr--small">
       </header>
-
-      <form action="/cart" method="post" novalidate class="cart">
-
         <div class="cart__row medium-down--hide cart__header-labels">
           <div class="grid--full">
             <div class="grid__item large--two-fifths push--large--three-fifths">
               <div class="grid--full">
                 <div class="grid__item one-third medium-down--half text-center">
-                  {{ 'cart.label.quantity' | t }}
+                 <h3> {{ 'cart.label.quantity' | t }}</h3>
                 </div>
                 <div class="grid__item two-thirds medium-down--half text-right">
-                  {{ 'cart.label.total' | t }}
+                  <h3> {{ 'cart.label.total' | t }}</h3>
                 </div>
               </div>
             </div>
@@ -41,7 +40,7 @@
               <div class="grid__item large--three-fifths">
                 <div class="grid">
 
-                  <div class="grid__item one-third">
+                  <div class="grid__item one-third product-cart--image">
                     <a href="{{ item.url | within: collections.all }}" class="cart__image">
 
                       {% comment %}
@@ -53,9 +52,9 @@
                   </div>
 
                   <div class="grid__item two-thirds">
-                    <a href="{{ item.url }}" class="h4 cart__product-name">
+                    <h3><a href="{{ item.url }}">
                       {{ item.product.title }}
-                    </a>
+                    </a></h3>
                     {% unless item.variant.title contains 'Default' %}
                       <p class="cart__product-meta">
                         {{ item.variant.title }}
@@ -118,6 +117,7 @@
                 - Your theme settings can turn this on or off. Default is on.
                 - Make sure you have name="note" for the message to be submitted properly
             {% endcomment %}
+               {% comment %}
             {% if settings.cart_notes_enable %}
               <div class="grid__item large--three-fifths">
                 <div class="cart__note">
@@ -126,7 +126,9 @@
                 </div>
               </div>
             {% endif %}
-            <div class="grid__item large--two-fifths text-center large--text-right{% unless settings.cart_notes_enable %} push--large--three-fifths{% endunless %}">
+            {% endcomment %}
+            
+            <div class="grid__item large--two-fifths right text-center large--text-right{% unless settings.cart_notes_enable %} push--large--three-fifths{% endunless %}">
               <div class="grid--full cart__row--table">
                 <div class="grid__item one-half large--one-third large--text-center">
                   <p class="cart__subtotal">{{ 'cart.general.subtotal' | t }}</p>
@@ -164,4 +166,3 @@
 
     {% endif %}
   </div>
-</div>

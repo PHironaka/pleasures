@@ -28,7 +28,7 @@
   {% assign sold_out = false %}
 {% endif %}
 
-<div class="grid__item grid-product large--one-quarter medium--one-half{% if sold_out %} is-sold-out{% endif %}">
+<div class="grid__item grid-product large--one-quarter small--one-half{% if sold_out %} is-sold-out{% endif %}">
   <div class="grid-product__wrapper">
     <div class="grid-product__image-wrapper">
       <a class="grid-product__image-link" href="{{ product.url | within: collection }}">
@@ -39,10 +39,9 @@
           <p>{{ 'products.product.sold_out_html' | t }}</p>
         </div>
       {% elsif on_sale %}
-        <div class="grid-product__on-sale">
-          {% assign compare_price = product.compare_at_price %}
-          {% assign product_price = product.price %}
-          {% include 'price-sale' %}
+        <div class="grid-product__on-sale">        
+          <p> SALE</p>
+          
         </div>
       {% endif %}
     </div>

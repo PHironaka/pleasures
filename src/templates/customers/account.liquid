@@ -7,6 +7,7 @@
 {% endcomment %}
 
 {% paginate customer.orders by 20 %}
+<div class="grid pink">
 
 <header class="section-header text-center">
   <h1>{{ 'customer.account.title' | t }}</h1>
@@ -14,7 +15,6 @@
   <hr class="hr--small">
 </header>
 
-<div class="grid">
 
   <div class="grid__item two-thirds medium-down--one-whole">
     <h2 class="h3">{{ 'customer.orders.title' | t }}</h2>

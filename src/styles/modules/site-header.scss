@@ -6,6 +6,8 @@ img {
     width: 100%;
     margin:0;
   }
+
+
 }
 
 
@@ -15,10 +17,21 @@ img {
 }
 
 
+
 .site-nav__link {
 	font-size: .85em;
     text-transform: uppercase;
     padding: 11px;
+
+      &:hover {
+    color:pink;
+    }
+
+    &:active {
+    color:white;
+    }
+
+    
     
     .icon-arrow-down {
     vertical-align:sub;
@@ -34,10 +47,12 @@ img {
     width: 100%;
     z-index: 100;
 
-      @include media-query($small) {
-    background:#ffc0cb;
+    svg g {
+    fill:white;
+    }
 
-  }
+     
+
 
 a {
     
@@ -51,9 +66,9 @@ a {
 #subNav {
     position: absolute;
     top: 50px;
+        margin:  0;
     left: 0;
     padding: 20px 0;
-    margin: 0;
     display: none;
     width: 100%;
     background-color: black;
@@ -61,13 +76,25 @@ a {
     overflow-x: hidden;
     z-index: 10;
     text-align:center;
+
+    a {
+
+    text-transform:uppercase;
+    font-size: .8em;
+        &:hover {
+    color:pink;
+    }
+    }
 }
 
 .dropdown {
 	margin:0;
 	a {
 	color:black;
+
 	}
+
+
 }
 
 .site-nav__item {
@@ -76,4 +103,174 @@ a {
 	display:inline-block;
 	    margin: 0 2em;
 	}
+}
+
+
+
+.modalContent {
+
+    background: pink !important;
+}
+
+
+.mc-layout__modalContent {
+
+    box-shadow: 0 !important;
+    display: block;
+    background: pink !important;
+    border-radius: 6px;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+}
+
+.modalContent__image {
+        width: 88% !important;
+
+    margin: 0 7% !important;
+}
+
+input .button {
+    border: 1px solid black !important;
+}
+
+.cart-link__bubble--visible {
+    background-color:red;
+}
+
+.cart__product-qty {
+    color:white;
+}
+
+h1.cart {
+    text-transform:uppercase;
+}
+
+.cart__row {margin-bottom:0;}
+
+.checkout {
+    background:pink;
+        color: black;
+    padding: 25px;
+
+    h3, a, input, button {
+    color:black !important;
+    }
+
+    input, button, textarea {
+    background: pink;
+    border: 1px solid black !important;
+    }
+}
+
+.mobile-nav__item:after {
+    border-bottom: 1px solid #000;
+}
+
+.drawer__header {
+    
+    border-bottom:1px solid black;
+}
+
+.mobile-nav__item a, .mobile-nav__toggle button {
+    font-size: 1em;
+    text-transform:uppercase;
+}
+
+.cart-link__bubble--visible {
+ @include media-query($small) {
+    
+    top: 7px;
+    right: 0px;
+  }
+
+}
+
+#search-menu {
+  position: fixed;
+  width: 100%;
+  height: 20em;
+  top: -20em;
+  left: 0;
+  right: 0;
+  white-space: nowrap;
+  z-index: 9999;
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 0.01) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.8)), color-stop(50%, rgba(0, 0, 0, 0.8)), color-stop(100%, rgba(0, 0, 0, 0.01)));
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 0.01) 100%);
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 0.01) 100%);
+  background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 0.01) 100%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 0.01) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cc000000', endColorstr='#1a000000',GradientType=0);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: 500ms ease all;
+  -moz-transition: 500ms ease all;
+  transition: 500ms ease all;
+}
+
+#search-menu.toggled {
+  top: 0;
+  opacity: 1;
+  visibility: visible;
+}
+
+#search-menu .wrapper {
+  position: relative;
+  margin: 3em auto 0 auto;
+  padding: 0 1em;
+}
+
+#search-menu .wrapper input {
+  width: 90%;
+  padding: 0 0 0.125em 0;
+  background: transparent;
+  border: none;
+  border-bottom: 3px solid #bfbfbf;
+  font-size: 4em;
+  color: #fff;
+}
+
+#search-menu .wrapper input:focus {
+  outline: none;
+}
+
+#search-menu .wrapper button {
+  position: absolute;
+  display: block;
+  width: 10%;
+  right: 0;
+  top: 0;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 4em;
+  -webkit-transition: 500ms ease all;
+  -moz-transition: 500ms ease all;
+  transition: 500ms ease all;
+}
+
+#search-menu .wrapper button:hover {
+  color: pink;
+}
+
+#search-menu .wrapper button:focus {
+  outline: none;
+}
+
+#search-icon {
+  padding: 0 0.25em 0.0em 0.15em;
+  font-size: 5em;
+  cursor: pointer;
+  color: #fff;
+  text-align: center;
+  -webkit-transition: 500ms ease all;
+  -moz-transition: 500ms ease all;
+  transition: 500ms ease all;
+}
+
+#search-icon:hover {
+  color: pink;
 }

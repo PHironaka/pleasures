@@ -2,9 +2,9 @@
  <footer>
  
  <div class="wrapper">
-    <div class="grid">
+    <div class="grid-full">
     <div class="upper">
-    <div class="grid__item large--one-third medium-down--one-half">
+    <div class="grid__item large--one-third medium-down--one-half footer-logo">
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="91px" height="31px" viewBox="0 0 91 31" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
@@ -34,23 +34,18 @@
 </svg>
 	<h3>A Mood. An Emotion. An Altered State of Being</h3>
     </div>
-     <div class="grid__item large--two-thirds large--text-right medium-down--hide">
-  		<ul>
-    		<li><a>Items</a></li>
-    		<li><a>Tops</a></li>
-    		<li><a>Headwear</a></li>
-
-    	</ul>	
+     <div class="grid__item large--two-thirds large--text-right">
+  	
 
     		<ul>
-    		<li><a>Subscribe</a></li>
-    		<li><a>Copyright</a></li>
-    		<li><a>Social</a></li>
+    		<li><a href="/collections/all">Shop</a></li>
+    		<li><a href="/collections/new-arrivals">New Arrivals</a></li>
+    		<li><a href="/pages/audio">Audio</a></li>
 
     	</ul>	
     	<div class="newsletter">
     		{% include 'newsletter' %}
-	<h3>Sign your life away. </br>
+	<h3 class="signup-copy">Sign your life away. 
 Just kidding, stay connected.</h3>
 
 </div>
@@ -58,25 +53,22 @@ Just kidding, stay connected.</h3>
     </div>
     </div>
     <div class="lower">
-    <div class="grid__item large--one-third medium-down--one-half">
+    <div class="grid__item large--one-third small-down--one-half">
     	<ul>
-    		<li><a>Search</a></li>
-    		<li><a>Shop</a></li>
-    		<li><a>Audio</a></li>
-    		<li><a>Contact</a></li>
-    		<li><a>Policy</a></li>
+    		<li><a href="/search">Search</a></li>
+    		<li><a href="/pages/contact">Contact</a></li>
+    		<li><a href="/pages/policy">Policy</a></li>
     	</ul>	
     </div>
-    <div class="grid__item large--two-thirds large--text-right medium-down--hide">
+    <div class="grid__item large--two-thirds large--text-right">
     		<h3 class="copyright">© {{ 'now' | date: "%Y" }} Pleasures Now LLC </h3>
 	<div class="social">
     		<h3> Follow Us:</h3>
-
-    		<li><a>{% include 'icon-instagram' %}</a></li>
-    		<li><a>{% include 'icon-facebook' %}</a></li>
-    		<li><a>{% include 'icon-twitter' %}</a></li>
-    	</div>
-    	</ul>	
+    		<li><a href="https://www.instagram.com/pleasures/" target="_blank">{% include 'icon-instagram' %}</a></li>
+    		<li><a href="https://www.facebook.com/Pleasures-1126494497428970/" target="_blank">{% include 'icon-facebook' %}</a></li>
+    		<li><a href="https://twitter.com/pleasures_now" target="_blank">{% include 'icon-twitter' %}</a></li>
+          
+    	
 
 
     </div>
