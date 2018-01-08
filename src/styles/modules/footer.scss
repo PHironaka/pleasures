@@ -41,7 +41,10 @@ footer {
 		font-family: oswald, serif;
 		font-size:.8em;
 		outline:none;
-
+		&.button:hover {
+		color:black;
+		background:white;
+		}
 
 
 		}
@@ -126,6 +129,14 @@ footer {
  		}
 	}
 
-	.copyright {display:inline;      margin-right: 13.75em;	text-transform:uppercase;
+	.copyright {display:inline;    text-align:center;	text-transform:uppercase;
 }
+}
+
+.sign-up {
+	text-align:right;
+@include media-query($small) {
+  text-align:left;
+}
+
 }

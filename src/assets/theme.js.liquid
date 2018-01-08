@@ -514,3 +514,15 @@ $(function() {
     $('#search-menu').removeClass('toggled');
   });
 });
+
+
+
+
+$(document).ready(function(){
+  var time = 0;
+  $('.grid-product').each(function() {
+      $(this).delay(time).fadeIn(500);
+      time += 300;
+  });
+});
+

@@ -24,12 +24,12 @@
       <header class="section-header text-center ">
         {% if search.performed %}
           {% if search.results_count == 0 %}
-            <h1 class="text-center">{{ 'general.search.no_results_html' | t: terms: search.terms }}</h1>
+            <h1 class="text-center search-result">{{ 'general.search.no_results_html' | t: terms: search.terms }}</h1>
           {% else %}
-            <h1 class="text-center">{{ 'general.search.results_for_html' | t: terms: search.terms }}</h1>
+            <h1 class="text-center search-result">{{ 'general.search.results_for_html' | t: terms: search.terms }}</h1>
           {% endif %}
         {% else %}
-          <h1 class="text-center">{{ 'general.search.title' | t }}</h1>
+          <h1 class="text-center search-result">{{ 'general.search.title' | t }}</h1>
         {% endif %}
         <hr class="hr--small">
       </header>
@@ -56,7 +56,7 @@
             <div class="grid__item grid-search large--one-quarter small--one-half">
               <div class="{% if item.price %}grid-search__product{% else %}grid-search__page{% endif %}">
                 {% if item.featured_image %}
-                  <div class="grid-product__image-wrapper">
+                  <div class="grid-product">
                     <a href="{{ item.url | within: collection }}" class="grid-product__image-link grid-search__product-link" title="{{ item.title | escape }}">
                       <img src="{{ item.featured_image.src | img_url: 'medium' }}" alt="{{ item.featured_image.alt }}" class="grid-search__image">
                     </a>
