@@ -65,7 +65,7 @@ fieldset {
     position: fixed;
     z-index: 10000;
     display: block;
-    bottom: 11em;
+    bottom: 9em;
     right: 2%;
     clear:both;
 }
@@ -815,3 +815,6 @@ color:black;
     }
 }
 
+.supports-fontface .icon-fallback-text .icon {
+    padding: 1px;
+}

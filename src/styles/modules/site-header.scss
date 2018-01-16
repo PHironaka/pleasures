@@ -21,7 +21,7 @@ img {
 .site-nav__link {
 	font-size: .85em;
     text-transform: uppercase;
-    padding: 11px;
+    padding: 16px 12px;
 
       &:hover {
     color:pink;
@@ -49,6 +49,10 @@ img {
 
     svg g {
     fill:white;
+    }
+
+    .grid--table>.grid__item {
+    padding-bottom: 3px;
     }
 
 }
@@ -131,7 +135,7 @@ input .button {
         width: 15px;
       height: 15px;
       padding-top: 1px;
-          margin: -5px -3px;
+          margin: 0 -3px;
       h3 {
           font-size: 10px;
     text-align: center;
