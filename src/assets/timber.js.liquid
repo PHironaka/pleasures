@@ -1007,3 +1007,10 @@ $(document).ready(function(){
   }, function() {
     $(this).find('#subNav').stop(true, true).delay(100).fadeOut(50);
   });
+
+ var sidebar = new StickySidebar('.sidebar', {
+    topSpacing: 20,
+    bottomSpacing: 20,
+    containerSelector: '.product-single',
+    innerWrapperSelector: '.sidebar__inner'
+  });

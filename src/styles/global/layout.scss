@@ -5,8 +5,9 @@ html {
 
     outline: none;
 }
-body, h1, h3 {
+body, html, input, h1, h3 {
   font-family: oswald, serif;
+  font-weight:400
 }
 
 html {
@@ -546,18 +547,25 @@ input {
 }
 
 .product-single__meta--wrapper {
-padding-left:45px;
-background:pink;
-color:black;
-padding-top:1em;
-padding-bottom:2em;
+    padding-left: 45px;
+    background: pink;
+    color: black;
+    padding-top: 1em;
+    padding-bottom: 2em;
     position: fixed;
-    right: 140px;
-    max-width: 410px;
+    right: 100px;
+    max-width: 360px;
+    overflow-y: scroll;
+    top: 100px;
+    bottom: 100px;
+
 @include media-query($small) {
     margin: 0;
     position:relative;
     right:0;
+    overflow-y:auto;
+    top:0;
+    bottom:0;
     max-width: 100%;
 }
 
@@ -573,7 +581,7 @@ color:black;
     width: 139px;
     padding: 12px;
 font-family: oswald, serif;
-
+font-weight:400;
 }
 
 
@@ -738,12 +746,12 @@ margin-top: -35px;
 
 .js-qty__adjust--minus, .ajaxcart__qty--minus {
     left: 0;
-     padding: 6px;
+     padding: 10px 6px;
     border-right: 1px solid #000; 
 }
 
 .js-qty__adjust--plus, .ajaxcart__qty--plus {
-    padding: 5px;
+    padding: 10px 6px;
 }
 
 .drawer .btn--secondary {

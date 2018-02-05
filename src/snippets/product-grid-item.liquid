@@ -1,18 +1,5 @@
 <!-- /snippets/product-grid-item.liquid -->
-{% comment %}
 
-  This snippet is used to showcase each product during the loop,
-  'for product in collection.products' in collection.liquid.
-
-  A liquid variable (grid_item_width) is set just before the this
-  snippet is included to change the size of the container.
-  Once the variable is set on a page, all future instances of this
-  snippet will use that width. Overwrite the variable to adjust this.
-
-  Example
-    - assign grid_item_width = 'large--one-quarter medium--one-half'
-
-{% endcomment %}
 
 {% unless grid_item_width %}
   {% assign grid_item_width = 'large--one-quarter medium--one-half' %}
@@ -36,11 +23,11 @@
       </a>
       {% if sold_out %}
         <div class="grid-product__sold-out">
-        <img src="https://cdn.shopify.com/s/files/1/2140/7529/files/sold.svg?4467137206087461905">
+        <img src="https://cdn.shopify.com/s/files/1/0879/6548/files/sold.svg?1800488305688857356">
         </div>
       {% elsif on_sale %}
         <div class="grid-product__on-sale">        
-        <img src="https://cdn.shopify.com/s/files/1/2140/7529/files/Sale.svg?8827715674550332389">
+        <img src="https://cdn.shopify.com/s/files/1/0879/6548/files/Sale.svg?1800488305688857356">
           
         </div>
       {% endif %}

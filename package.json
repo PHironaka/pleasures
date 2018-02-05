@@ -3,5 +3,8 @@
   "version": "0.0.1",
   "devDependencies": {
     "@shopify/slate-tools": "0.13.0"
+  },
+  "dependencies": {
+    "sticky-sidebar": "^3.3.1"
   }
 }
