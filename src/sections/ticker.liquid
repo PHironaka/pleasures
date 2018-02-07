@@ -7,6 +7,7 @@
          <span style="color:{% if section.settings.home-video-text-1 %} {{ section.settings.color-font-1 | escape }} {%endif%};"> {{ section.settings.home-video-text-1 | escape }}</span>
          <span style="color:{% if section.settings.home-video-text-2 %} {{ section.settings.color-font-2 | escape }} {%endif%};">{{ section.settings.home-video-text-2 | escape }}</span>
          <span style="color:{% if section.settings.home-video-text-3 %} {{ section.settings.color-font-3 | escape }} {%endif%};">{{ section.settings.home-video-text-3 | escape }}</span>
+         <span style="color:{% if section.settings.home-video-text-4 %} {{ section.settings.color-font-4 | escape }} {%endif%};">{{ section.settings.home-video-text-4 | escape }}</span>
         </h2>
  </div>
 
@@ -43,6 +44,13 @@
         "default": "Welcome!"
       },
 
+        {
+        "type": "text",
+        "id": "home-video-text-4",
+        "label": "Heading",
+        "default": "Welcome!"
+      },
+
       {
         "type": "color",
         "id": "color-font-1",
@@ -59,6 +67,13 @@
         "type": "color",
         "id": "color-font-3",
         "label": "font color-3",
+        "default": "#fff"
+      },
+
+       {
+        "type": "color",
+        "id": "color-font-4",
+        "label": "font color-4",
         "default": "#fff"
       }
   		

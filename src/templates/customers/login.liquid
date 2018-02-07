@@ -30,9 +30,7 @@
           <input type="password" placeholder="password"  value="" name="customer[password]" id="CustomerPassword" class="input-full{% if form.errors contains 'password' %} error{% endif %}" placeholder="{{ 'customer.login.password' | t }}">
         {% endif %}
 
-        <p>
-          <input type="submit" class="btn btn--full" value="{{ 'customer.login.sign_in' | t }}">
-        </p>
+          <input type="submit" class="signin btn btn--full" value="{{ 'customer.login.sign_in' | t }}">
         <p>{{ 'layout.customer.create_account' | t | customer_register_link }}</p>
         <p><a href="{{ shop.url }}">{{ 'customer.login.cancel' | t }}</a></p>
         {% if form.password_needed %}
@@ -86,7 +84,7 @@
       <hr class="hr--small">
 
       {% form 'guest_login' %}
-        <input type="submit" class="btn" value="{{ 'customer.login.guest_continue' | t }}">
+        <input  type="submit" class="btn" value="{{ 'customer.login.guest_continue' | t }}">
       {% endform %}
     {% endif %}
 
